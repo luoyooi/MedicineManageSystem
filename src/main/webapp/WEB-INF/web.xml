@@ -1,0 +1,101 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+    <!--字符编码过滤器-->
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!--处理员工相关请求-->
+    <servlet>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <servlet-class>com.servlet.EmployeeServlet</servlet-class>
+    </servlet>
+    <!--登录相关-->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <!--药品相关-->
+    <servlet>
+        <servlet-name>MedicineServlet</servlet-name>
+        <servlet-class>com.servlet.MedicineServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MedicineTypeServlet</servlet-name>
+        <servlet-class>com.servlet.MedicineTypeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MedicineIdServlet</servlet-name>
+        <servlet-class>com.servlet.MedicineIdServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PutStorageServlet</servlet-name>
+        <servlet-class>com.servlet.PutStorageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.servlet.UploadServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>com.servlet.OrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UploadEmpServlet</servlet-name>
+        <servlet-class>com.servlet.UploadEmpServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IncomeServlet</servlet-name>
+        <servlet-class>com.servlet.IncomeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <url-pattern>/emp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MedicineServlet</servlet-name>
+        <url-pattern>/medicine</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MedicineTypeServlet</servlet-name>
+        <url-pattern>/medicinetype</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MedicineIdServlet</servlet-name>
+        <url-pattern>/mid</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PutStorageServlet</servlet-name>
+        <url-pattern>/putsto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/uploadMedInfo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/order</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadEmpServlet</servlet-name>
+        <url-pattern>/uploadEmp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IncomeServlet</servlet-name>
+        <url-pattern>/income</url-pattern>
+    </servlet-mapping>
+</web-app>

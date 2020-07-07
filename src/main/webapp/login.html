@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>系统登录</title>
+        <!-- import CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+        <link type="text/css" rel="styleSheet"  href="./css/login.css"/>
+    </head>
+    <body>
+        <div id="app">
+            <div id="logo">
+                <img src="./img/logo.png" alt="logo">
+            </div>
+            <p id="title">医药销售管理系统登录</p>
+            <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="60px" class="demo-ruleForm">
+                <el-form-item label="账号" prop="login_name">
+                    <el-input type="text" v-model="ruleForm.login_name" autocomplete="off"></el-input>
+                </el-form-item>
+                <el-form-item label="密码" prop="login_password">
+                    <el-input type="password" v-model="ruleForm.login_password" autocomplete="off" @keyup.enter.native="submitForm('ruleForm')"></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
+                    <el-button @click="resetForm('ruleForm')">重置</el-button>
+                </el-form-item>
+            </el-form>
+        </div>
+    </body>
+    <!--引入vue-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <!-- import element-UI 核心js -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!-- import Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="./js/login.js"></script>
+</html>

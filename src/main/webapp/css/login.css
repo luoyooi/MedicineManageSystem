@@ -1,0 +1,31 @@
+﻿body{
+    background-color: #142850;
+}
+
+#app{
+    border-radius: 8px;
+    width: 475px;
+    height: 210px;
+    padding: 40px 20px;
+    margin: 150px auto;
+    background-color: #dae1e7;
+    position: relative;
+}
+
+
+#logo{
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transform: translate(-50%, 50%);
+}
+
+#logo img{
+    width: 120px;
+}
+
+#title{
+    text-align: center;
+    color: #27496d;
+    font-size: 18px;
+}
